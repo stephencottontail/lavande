@@ -1,0 +1,67 @@
+.widget-areas {
+	margin-top: map-get( $spacers, 3 );
+	margin-bottom: map-get( $spacers, 3 );
+}
+
+.widget-area {
+	margin-bottom: map-get( $spacers, 5 );
+	
+	@include media-breakpoint-up( md ) {
+		margin-bottom: 0;
+	}
+}
+
+@include media-breakpoint-up( md ) {
+	.widget-area-left {
+		@include make-col-offset( 2 );
+		margin-right: auto;
+	}
+}
+
+.widget {
+	margin-bottom: map-get( $spacers, 5 );
+	min-width: 0;
+	
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+	
+	select {
+		max-width: 100%;
+	}
+}
+
+.widget-title {
+	@include mini-header();
+}
+
+.widget_rss {
+	position: static;
+	
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+	
+	li {
+		margin: map-get( $spacers, 2 ) 0;
+	}
+	
+	.rss-date {
+		display: block;
+		font-style: italic;
+	}
+}
+
+#wp-calendar {
+	text-align: center;
+	width: 100%;
+	
+	#prev {
+		text-align: left;
+	}
+	
+	#next {
+		text-align: right;
+	}
+}

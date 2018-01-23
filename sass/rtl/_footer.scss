@@ -1,0 +1,10 @@
+.site-info {
+	text-align: right;
+}
+
+@include media-breakpoint-up( lg ) {
+	.social-media {
+		margin-left: 0;
+		margin-right: percentage( 3 / 12 );
+	}
+}

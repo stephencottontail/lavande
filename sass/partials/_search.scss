@@ -1,0 +1,13 @@
+.search-form {
+	display: flex;
+	
+	label {
+		margin: 0;
+		flex: 2 0 auto;
+	}
+}
+
+.search-submit {
+	flex: 1 1 auto;
+	width: auto;
+}

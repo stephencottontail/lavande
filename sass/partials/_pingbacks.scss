@@ -1,0 +1,19 @@
+.pingback {
+	margin-bottom: map-get( $spacers, 2 );
+}
+
+.pingback-header {
+	font-family: $headings-font-family;
+	font-size: $font-size-lg;
+	font-style: italic;
+	
+	@include media-breakpoint-up( lg ) {
+		display: inline-block;
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	.pingback-content {
+		display: inline-block;
+	}
+}

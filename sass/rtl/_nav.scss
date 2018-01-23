@@ -1,0 +1,11 @@
+@include media-breakpoint-up( md ) {
+	.nav-previous {
+		margin-left: auto;
+		margin-right: percentage( 2 / 12 );
+		
+		.comment-navigation & {
+			margin-left: percentage( 6 / 12 );
+			margin-right: 0;
+		}
+	}
+}

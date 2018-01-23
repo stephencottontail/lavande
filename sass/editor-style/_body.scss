@@ -1,0 +1,16 @@
+.mce-content-body {
+	background-color: theme-color( 'light' );
+	color: theme-color( 'dark' );
+	font-family: $font-family-base;
+	line-height: $line-height-base;
+	padding: map-get( $spacers, 3 );
+	text-rendering: optimizeLegibility;
+	
+	code {
+	  padding: $code-padding-y $code-padding-x;
+	  font-size: $code-font-size;
+	  color: $code-color;
+	  background-color: $code-bg;
+	  @include border-radius( $border-radius );
+  }
+}

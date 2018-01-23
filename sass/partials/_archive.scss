@@ -1,0 +1,22 @@
+.archive-header{
+	@include page-header();
+}
+
+.archive-title {
+	margin: 0;
+}
+
+.archive-description {
+	@include make-col-ready();
+	@include make-col( 12 );
+	
+	color: $text-muted;
+	
+	p {
+		margin: 0;
+	}
+	
+	@include media-breakpoint-up( md ) {
+		@include make-col( 4 );
+	}
+}

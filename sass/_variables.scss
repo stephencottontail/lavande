@@ -1,0 +1,32 @@
+/* colors */
+$white: #fafafa;
+$black: #151515;
+$purple: #ad5e99;
+$green: #009473;
+
+$theme-colors: (
+	'primary': $purple,
+	'secondary': $green,
+	'light': $white,
+	'dark': $black
+);
+
+/* global */
+$body-color: $black;
+$border-color: #ced4da;
+
+/* fonts */
+$font-family-sans-serif: "Alegreya Sans", "Helvetica", "Arial", sans-serif;
+$font-family-serif: "Playfair Display", "Georgia", "Times", serif;
+$font-family-monospace: "Courier New", monospace;
+$headings-font-family: $font-family-serif;
+$headings-font-weight: 900;
+
+/* links */
+$link-decoration: underline;
+
+/* code */
+$code-padding-x: 0.5em;
+$code-padding-y: 0.25em;
+$kbd-bg: $black;
+$pre-color: $black;

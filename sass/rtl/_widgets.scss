@@ -1,0 +1,23 @@
+.widget-areas {
+	text-align: right;
+}
+
+@include media-breakpoint-up( md ) {
+	.widget-area-left {
+		margin-left: auto;
+		margin-right: percentage( 2 / 12 );
+	}
+}
+
+#wp-calendar {
+	text-align: center;
+	width: 100%;
+	
+	#prev {
+		text-align: right;
+	}
+	
+	#next {
+		text-align: left;
+	}
+}

@@ -1,0 +1,19 @@
+.archive-header{
+	@include page-header( $is_rtl: true );
+}
+
+.archive-description {
+	@include make-col-ready();
+	@include make-col( 12 );
+	
+	color: $text-muted;
+	text-align: right;
+	
+	p {
+		margin: 0;
+	}
+	
+	@include media-breakpoint-up( md ) {
+		@include make-col( 4 );
+	}
+}

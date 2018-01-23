@@ -1,0 +1,23 @@
+article.post {
+	margin-bottom: map-get( $spacers, 5 );
+	min-width: 0;
+	
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+@include media-breakpoint-up( md ) {
+	.entry-header {
+		text-align: left;
+	}
+}
+
+.entry-thumbnail {
+	@include full-width( $is_rtl: true );
+}
+
+.entry-meta,
+.entry-content {
+	text-align: right;
+}

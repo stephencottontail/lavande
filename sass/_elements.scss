@@ -1,0 +1,51 @@
+blockquote {
+	background-color: rgba( theme-color( 'secondary' ), 0.15 );
+	border-left: 2px solid theme-color( 'secondary' );
+	margin: map-get( $spacers, 2 ) 0;
+	padding-left: map-get( $spacers, 3 );
+}
+
+ol,
+ul {
+	padding-left: map-get( $spacers, 3 );
+	
+	ol,
+	ul {
+		padding-left: map-get( $spacers, 3 );
+	}
+}
+
+table {
+	@include lavande-table();
+}
+
+address {
+	font-style: italic;
+}
+
+abbr[title],
+acronym {
+	border-bottom: 1px dashed theme-color( 'dark' );
+	cursor: pointer;
+	text-decoration: none;
+}
+
+ins,
+mark,
+var {
+	background-color: rgba( theme-color( 'secondary' ), 0.25 );
+	text-decoration: none;
+}
+
+tt {
+	color: $code-color;
+	font-family: $font-family-monospace;
+	font-size: $code-font-size;
+	padding: $code-padding-y $code-padding-x;
+}
+
+var {
+	font-family: $font-family-monospace;
+	font-size: $code-font-size;
+	font-style: normal;
+}

@@ -1,0 +1,13 @@
+@include media-breakpoint-up( md ) {
+	body {
+		position: relative;
+		
+		&::before {
+			background-color: theme-color( 'primary' );
+			position: fixed;
+			height: 100vh;
+			width: percentage( 2 / 12 );
+			content: '';
+		}
+	}
+}

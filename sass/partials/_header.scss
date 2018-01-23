@@ -1,0 +1,28 @@
+.site-header {
+	padding: map-get( $spacers, 3 ) 0;
+}
+
+.site-branding {
+	order: 1;
+	word-wrap: break-word;
+	
+	@include media-breakpoint-up( md ) {
+		order: 2;
+	}
+}
+
+.site-title {
+	font-family: $headings-font-family;
+	font-size: $h1-font-size;
+	font-weight: 900;
+	line-height: 1.1;
+	margin: 0;
+	
+	a {
+		text-decoration: none;
+	}
+}
+
+.site-description {
+	color: $text-muted;
+}

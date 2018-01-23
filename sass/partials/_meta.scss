@@ -1,0 +1,13 @@
+@include media-breakpoint-up( md ) {
+	.meta-info {
+		display: block;
+	}
+}
+
+.meta-title {
+	@include mini-header();
+}
+
+.edit-wrapper {
+	font-weight: bold;
+}

@@ -1,0 +1,20 @@
+.page-links {
+	margin: map-get( $spacers, 2 ) 0;
+	
+	a {
+		display: inline-block;
+		border: 1px dashed theme-color( 'secondary' );
+		padding: map-get( $spacers, 2 );
+		text-decoration: none;
+		
+		@include hover-focus {
+			border-style: solid;
+		}
+	}
+}
+
+.page-links-title {
+	@include mini-header();
+	
+	margin-bottom: map-get( $spacers, 2 );
+}

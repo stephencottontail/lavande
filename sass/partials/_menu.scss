@@ -1,0 +1,85 @@
+.site-navigation {
+	position: relative;
+	order: 2;
+	z-index: 10;
+	
+	a {
+		display: block;
+		padding: map-get( $spacers, 1 );
+		text-decoration: none;
+		
+		@include media-breakpoint-up( md ) {
+			@include hover-focus {
+				background-color: $link-hover-color;
+			}
+		}
+	}
+	
+	@include media-breakpoint-up( md ) {
+		color: theme-color( 'light' );
+		order: 1;
+		
+		ul {
+			position: absolute;
+			background-color: theme-color( 'primary' );
+			width: calc( 100% - #{$grid-gutter-width} );
+			
+			ul {
+				position: static;
+			}
+		}
+		
+		a {
+			color: inherit;
+			line-height: 1.1;
+		}
+	}
+	
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-transform: uppercase;
+		
+		ul {
+			font-size: 0.9em;
+			text-transform: lowercase;
+		}
+		
+		.menu-active & {
+			display: block;
+		}
+	}
+}
+
+.menu-toggle {
+	@include full-width();
+	
+	background-color: transparent;
+	border-top: 1px dashed theme-color( 'secondary' );
+	border-bottom: 1px dashed theme-color( 'secondary' );
+	border-left: none;
+	border-right: none;
+	margin-bottom: map-get( $spacers, 2 );
+	padding: 0;
+	text-align: center;
+	
+	@include hover-focus {
+		border-top-style: solid;
+		border-bottom-style: solid;
+		border-left: none;
+		border-right: none;
+	}
+	
+	@include media-breakpoint-up( md ) {
+		border-top-color: theme-color( 'light' );
+		border-bottom-color: theme-color( 'light' );
+		color: theme-color( 'light' );
+		
+		@include hover-focus {
+			border-top-color: theme-color( 'light' );
+			border-bottom-color: theme-color( 'light' );
+		}
+	}
+}

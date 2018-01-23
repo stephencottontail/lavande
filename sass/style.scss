@@ -1,0 +1,40 @@
+/*!
+Theme Name: Lavande
+Author: Stephen Dickinson
+Author URI: http://stephencottontail.com/
+Description: There is beauty in ugliness. There is beauty in chaos. Lavande is that hidden beauty in everything.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: lavande
+Tags: one-column, editor-style, footer-widgets, custom-menu, featured-images, threaded-comments, translation-ready, blog
+*/
+
+
+@import "../node_modules/bootstrap-beta/scss/functions";
+@import "variables";
+@import "../node_modules/bootstrap-beta/scss/variables";
+@import "../node_modules/bootstrap-beta/scss/mixins";
+@import "mixins";
+
+@import "elements";
+@import "partials/404";
+@import "partials/a11y";
+@import "partials/archive";
+@import "partials/background";
+@import "partials/comments";
+@import "partials/content";
+@import "partials/footer";
+@import "partials/forms";
+@import "partials/header";
+@import "partials/media";
+@import "partials/menu";
+@import "partials/meta";
+@import "partials/nav";
+@import "partials/pagination";
+@import "partials/password";
+@import "partials/pingbacks";
+@import "partials/search";
+@import "partials/widgets";
+
+.sticky { /* required for theme review */ }

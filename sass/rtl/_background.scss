@@ -1,0 +1,9 @@
+@include media-breakpoint-up( md ) {
+	body.rtl {
+		position: relative;
+		
+		&::before {
+			right: 0;
+		}
+	}
+}

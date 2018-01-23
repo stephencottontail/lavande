@@ -1,0 +1,75 @@
+.navigation {
+	margin-top: map-get( $spacers, 3 );
+	margin-bottom: map-get( $spacers, 3 );
+}
+
+.nav-links {
+	@include make-row();
+	
+	a {
+		display: block;
+		text-decoration: none;
+		
+		@include hover-focus {
+			text-decoration: none;
+		}
+	}
+	
+	& > div {
+		border-top: 1px dashed theme-color( 'secondary' );
+		border-bottom: 1px dashed theme-color( 'secondary' );
+		text-align: center;
+		
+		@include hover-focus {
+			border-top-style: solid;
+			border-bottom-style: solid;
+		}
+	}
+	
+	@include media-breakpoint-up( md ) {
+		justify-content: flex-end;
+	}
+}
+
+.nav-previous {
+	@include make-col-ready();
+	
+	margin-right: auto;
+	
+	@include media-breakpoint-up( md ) {
+		@include make-col-offset( 2 );
+		@include make-col( 5 );
+		
+		.comment-navigation & {
+			@include make-col-offset( 0 );
+			@include make-col( 6 );
+		}
+	}
+}
+
+.nav-next {
+	@include make-col-ready();
+
+	.nav-previous + & {
+		margin-top: map-get( $spacers, 1 );
+		
+		@include media-breakpoint-up( md ) {
+			margin-top: 0;
+		}
+	}
+	
+	@include media-breakpoint-up( md ) {
+		@include make-col( 5 );
+		
+		.comment-navigation & {
+			@include make-col-offset( 0 );
+			@include make-col( 6 );
+		}
+	}
+}
+
+.nav-title {
+	@include mini-header();
+	
+	color: theme-color( 'dark' );
+}

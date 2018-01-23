@@ -1,0 +1,74 @@
+.comments-area {
+	margin-bottom: map-get( $spacers, 3 );
+	
+	.comment-list {
+		list-style: none;
+		padding: 0;
+	}
+	
+	.children {
+		list-style: none;
+		padding: 0;
+	
+		@include media-breakpoint-up( md ) {
+			padding-left: map-get( $spacers, 3 );
+		}
+		
+		@include media-breakpoint-up( lg ) {
+			padding-left: map-get( $spacers, 5 );
+		}
+	}
+}
+
+.comment-wrapper {
+	margin-bottom: map-get( $spacers, 5 );
+	
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+.comment-body {
+	margin-bottom: map-get( $spacers, 2 );
+}
+
+.comment-header {
+	margin-bottom: map-get( $spacers, 2 );
+	
+	cite {
+		position: relative;
+		left: -15%;
+		background-color: rgba( theme-color( 'light' ), 0.85 );
+		font-family: $headings-font-family;
+		margin: 0 map-get( $spacers, 3 );
+		z-index: 10;
+		
+		.bypostauthor & {
+			background-color: rgba( theme-color-level( 'light', 1 ), 0.85 );
+		}
+	
+		@include media-breakpoint-up( md ) {
+			font-size: $h2-font-size;
+			left: -5%;
+		}
+	}
+	
+	.in-reply-to {
+		color: $text-muted;
+		
+		@include media-breakpoint-up( md ) {
+			display: none;
+		}
+	}
+}
+
+.comment-action {
+	display: inline-block;
+	margin-right: map-get( $spacers, 3 );
+}
+
+.awaiting-moderation,
+.no-comments {
+	color: $text-muted;
+	font-style: italic;
+}

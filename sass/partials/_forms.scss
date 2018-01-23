@@ -1,0 +1,43 @@
+%form-input {
+	appearance: none;
+	background-color: theme-color( 'light' );
+	border-style: dashed;
+	border-width: 1px;
+	border-color: transparent;
+	border-bottom-color: theme-color( 'secondary' );
+	border-radius: 0;
+	padding: map-get( $spacers, 2 ) map-get( $spacers, 1 );
+	width: 100%;
+	
+	@include hover-focus {
+		border-color: theme-color( 'secondary' );
+		border-style: solid;
+	}
+}
+
+textarea,
+input {
+	@extend %form-input;
+}
+
+textarea {
+	border-color: theme-color( 'secondary' );
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+	appearance: none;
+	border: 1px dashed theme-color( 'secondary' );
+	border-radius: 0;
+	padding: map-get( $spacers, 2 ) map-get( $spacers, 1 );
+	
+	@include hover-focus {
+		border-color: theme-color( 'secondary' );
+		border-style: solid;
+	}
+}
+
+.submit {
+	width: auto;
+}

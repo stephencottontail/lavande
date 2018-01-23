@@ -1,0 +1,26 @@
+.screen-reader-text {
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+
+	&:focus {
+		display: block;
+		top: 0;
+		left: 0;
+		height: auto;
+		width: auto;
+		background-color: theme-color( 'light' );
+		border-radius: $border-radius;
+		clip: auto !important;
+		clip-path: none;
+		color: theme-color( 'dark' );
+		z-index: 100000; /* above WP toolbar */
+	}
+}

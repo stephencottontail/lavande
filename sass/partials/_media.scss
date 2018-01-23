@@ -1,0 +1,58 @@
+figure, img {
+	max-width: 100%;
+	height: auto;
+}
+
+.alignleft {
+	display: block;
+	margin: 0 auto map-get( $spacers, 2 ) auto;
+	
+	@include media-breakpoint-up( s ) {
+		display: inline;
+		float: left;
+		margin-right: map-get( $spacers, 2 );
+	}
+}
+
+.alignright {
+	display: block;
+	margin: 0 auto map-get( $spacers, 2 ) auto;
+	
+	@include media-breakpoint-up( s ) {
+		display: inline;
+		float: right;
+		margin-left: map-get( $spacers, 2 );
+	}
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto map-get( $spacers, 2 ) auto;
+}
+
+.wp-caption-text {
+	color: $text-muted;
+}
+
+.gallery {
+	margin-bottom: map-get( $spacers, 2 );
+}
+
+.gallery-item {
+	display: inline-block;
+	margin-bottom: map-get( $spacers, 2 );
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+	
+	@for $i from 1 to 9 {
+		.gallery-columns-#{$i} & {
+			width: 100% / $i;
+		}
+	}
+	
+	.gallery-caption {
+		color: $text-muted;
+	}
+}

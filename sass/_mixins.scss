@@ -1,0 +1,60 @@
+@mixin full-width( $is_rtl: false ) {
+	@if $is_rtl {
+		margin-right: -( $grid-gutter-width / 2 );
+	} @else {
+		margin-left: -( $grid-gutter-width / 2 );
+	}
+	
+	width: calc( 100% + #{$grid-gutter-width} );
+}
+
+@mixin mini-header() {
+	display: block;
+	font-family: $font-family-base;	
+	font-size: $font-size-base;
+	font-weight: bold;
+	line-height: 1.2;
+}
+
+@mixin lavande-table() {
+	border: 1px solid $border-color;
+	margin: map-get( $spacers, 2 ) 0;
+	max-width: 100%;
+	
+	th,
+	td {
+		border: 1px solid $border-color;
+		padding: map-get( $spacers, 1 );
+	}
+}
+
+@mixin page-header( $is_rtl: false ) {
+	@include make-col-ready();
+	@include make-col( 10 );
+	@if $is_rtl { @include make-col-offset( 2 ); }
+	
+	background-color: theme-color( 'secondary' );
+	color: theme-color( 'light' );
+	font-style: italic;
+	line-height: 1.1;
+	padding: 0 map-get( $spacers, 3 );
+	text-align: center;
+	text-transform: lowercase;
+	word-wrap: break-word;
+
+	@include media-breakpoint-up( md ) {
+		@include make-col( 6 );
+		
+		@if $is_rtl {
+			margin-left: 0;
+			margin-right: percentage( 2 / 12 );
+			text-align: left;
+		} @else {
+			@include make-col-offset( 2 );
+			
+			text-align: right;
+		}
+		
+		padding: map-get( $spacers, 3 ) map-get( $spacers, 1 );
+	}
+}
