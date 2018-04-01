@@ -172,6 +172,30 @@ function lavande_google_fonts() {
 	return esc_url_raw( $fonts_url );
 }
 
+if ( ! function_exists( 'lavande_link_pages' ) ) :
+/**
+ * Let's display multipage posts differently
+ */
+function lavande_link_pages( $output, $args ) {
+	global $page;
+	global $numpages;
+	global $multipage;
+	
+	if ( ! $multipage ) {
+		return $output;
+	}
+	
+	/* translators: 1 = current page, 2 = number of pages of a multi-page post */
+	$page_links_title = sprintf( __( 'Page %1$s of %2$s', 'lavande' ),
+		number_format_i18n( $page ),
+		number_format_i18n( $numpages )
+	);
+	
+	return '<span class="page-links-title">' . $page_links_title . '</span>' . $output;
+}
+add_filter( 'wp_link_pages', 'lavande_link_pages', 10, 2 );
+endif;
+
 /**
  * Custom template tags for this theme.
  */

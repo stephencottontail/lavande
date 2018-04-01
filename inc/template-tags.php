@@ -144,36 +144,3 @@ function lavande_show_comments( $comment, $args, $depth ) {
 	
 } // end of function
 endif;
-
-if ( ! function_exists( 'lavande_link_pages' ) ) :
-/**
- * Let's display multipage posts differently
- */
-function lavande_link_pages() {
-	global $multipage;
-	global $page;
-	global $numpages;
-	
-	if ( ! $multipage ) {
-		return;
-	}
-	?>
-	
-	<div class="page-links">
-		<?php /* translators: 1 = current page, 2 = number of pages for a multipage post */ ?>
-		<span class="page-links-title"><?php printf( __( 'Page %1$s of %2$s', 'lavande' ), number_format_i18n( $page ), number_format_i18n( $numpages ) ); ?></span>
-		
-		<?php
-		wp_link_pages( array(
-			'before'           => null,
-			'after'            => null,
-			'next_or_number'   => 'next',
-			'previouspagelink' => __( 'Previous Page', 'lavande' ),
-			'nextpagelink'     => __( 'Next Page', 'lavande' )
-		) );
-		?>
-	</div><!-- .page-links -->
-	
-	<?php
-}
-endif;
