@@ -23,7 +23,13 @@
 				<?php
 				the_content();
 		
-				lavande_link_pages();
+				wp_link_pages( array(
+					'before'           => '<div class="page-links">',
+					'after'            => '</div>',
+					'next_or_number'   => 'next',
+					'previouspagelink' => __( 'Previous Page', 'lavande' ),
+					'nextpagelink'     => __( 'Next Page', 'lavande' )
+				) );
 				?>
 			</div><!-- .entry-content -->
 		
