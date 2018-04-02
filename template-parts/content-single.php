@@ -83,28 +83,32 @@
 								<?php endif; ?>
 							</div><!-- .tags-links -->
 						</div><!-- .tags-wrapper -->
-					<?php endif; ?>
+					<?php
+					endif;
 					
-					<div class="col-lg-2 meta-wrapper edit-wrapper">
-						<?php
-						edit_post_link(
-							sprintf(
-								wp_kses(
-									/* translators: %s: Name of current post. Only visible to screen readers */
-									__( 'Edit <span class="screen-reader-text">%s</span>', 'lavande' ),
-									array(
-										'span' => array(
-											'class' => array(),
-										),
-									)
+					if ( get_edit_post_link() ) :
+					?>
+						<div class="col-lg-2 meta-wrapper edit-wrapper">
+							<?php
+							edit_post_link(
+								sprintf(
+									wp_kses(
+										/* translators: %s: Name of current post. Only visible to screen readers */
+										__( 'Edit <span class="screen-reader-text">%s</span>', 'lavande' ),
+										array(
+											'span' => array(
+												'class' => array(),
+											),
+										)
+									),
+									get_the_title()
 								),
-								get_the_title()
-							),
-							'<span class="edit-link">',
-							'</span>'
-						);
-						?>
-					</div>
+								'<span class="edit-link">',
+								'</span>'
+							);
+							?>
+						</div>
+					<?php endif; ?>
 				</div><!-- .row -->
 			</footer><!-- .entry-footer -->
 		</div><!-- .col-md-10 -->
